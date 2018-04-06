@@ -5,6 +5,6 @@ from . import models
 
 class RegForm(forms.ModelForm):
     class Meta():
-        models = models.Registration
-        fields = ('Name','Email','Phone','Qualification','Interested Course','Message')
+        model = models.Registration
+        fields = ('Name','Email','Phone','Qualification','InterestedCourse')
         

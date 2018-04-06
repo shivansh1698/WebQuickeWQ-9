@@ -15,9 +15,19 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from django.urls import url
-from . import views
+from django.conf.urls import url
+from wq_9.views import RegistrationCreate,Home,Contact,Course1,Course2,Course3,Course4
+
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    url(r'^$',views.RegistrationCreate.as_view(),name = 'create'),
+    url(r'^$',Home.as_view(), name ='home'),
+    url(r'^register$', RegistrationCreate.as_view(), name ='create'),
+    url(r'^contactus$',Contact.as_view(), name ='contact'),
+    url(r'^webdesigning$', Course1.as_view(), name='course1'),
+    url(r'^phptraining$',Course2.as_view(),name = 'course2'),
+    url(r'^javatraining$', Course3.as_view(), name='course3'),
+    url(r'^androidtraining$', Course4.as_view(), name='course4'),
+
+]

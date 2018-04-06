@@ -7,6 +7,7 @@ class Registration(models.Model):
     Email = models.CharField(max_length = 200)
     Phone = models.CharField(max_length = 20)
     Qualification  = models.CharField(max_length = 30)
-    Interested Course = models.CharField(max_length= 30)
+    InterestedCourse = models.CharField(max_length= 30)
+
     
 
